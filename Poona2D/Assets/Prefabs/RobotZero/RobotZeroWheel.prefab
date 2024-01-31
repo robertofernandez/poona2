@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5822297957622243584}
   - component: {fileID: 7340736773544586983}
   - component: {fileID: 6671716721966212136}
+  - component: {fileID: 3968675602077828387}
   m_Layer: 0
   m_Name: RobotZeroWheel
   m_TagString: Untagged
@@ -120,3 +121,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.42
+--- !u!114 &3968675602077828387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751347822315007195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c480dc33aa555644c969d00b30997c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterTransform: {fileID: 0}
+  currentRotation: 0

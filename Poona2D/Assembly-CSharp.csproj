@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ContinuosBackgroundRender.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\RobotZeroWheel.cs" />
     <Compile Include="Assets\Scripts\FollowerX.cs" />
   </ItemGroup>
   <ItemGroup>
