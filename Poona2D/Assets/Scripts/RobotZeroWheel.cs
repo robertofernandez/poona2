@@ -10,7 +10,13 @@ public class RobotZeroWheel : MonoBehaviour {
 	}
 	
 	void Update () {
-        currentRotation--;
+		float xInput = Input.GetAxis("Horizontal");
+        if (xInput > 0) {
+            currentRotation--;
+        } else if (xInput < 0) {
+            currentRotation++;
+        }
+
 		transform.rotation = Quaternion.Euler(0, 0, currentRotation);
 	}
 }
