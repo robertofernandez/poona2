@@ -7,7 +7,7 @@ public class Paddle : MonoBehaviour {
     //public float xInput = 0;
     public float yInput = 0;
 
-	float velocidadRotacion = 100;
+	float velocidadRotacion = 500;
 
 	private Rigidbody2D rigidbodyObject;
 
@@ -27,10 +27,18 @@ public class Paddle : MonoBehaviour {
 			transform.rotation = Quaternion.Euler(0, 0, currentRotation);
 		}
 		*/
-       float inputRotacion = Input.GetAxis("Vertical");
+       float inputRotation = Input.GetAxis("Vertical");
+
+	   if(inputRotation == 0) 
+	   {
+		rigidbodyObject.constraints = RigidbodyConstraints2D.FreezeRotation;
+	   } else
+	   {
+		rigidbodyObject.constraints = RigidbodyConstraints2D.None;
+	   }
 
         // Calcular la velocidad angular basada en la entrada y la velocidad de rotación
-        float velocidadAngular = inputRotacion * velocidadRotacion;
+        float velocidadAngular = inputRotation * velocidadRotacion;
 
         // Establecer la velocidad angular en el Rigidbody2D
         rigidbodyObject.angularVelocity = -velocidadAngular; // El signo negativo es para que la rotación sea en sentido horario
