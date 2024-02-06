@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8198665260440108431}
   - component: {fileID: 2419383151286697816}
   - component: {fileID: 1269044429372520662}
+  - component: {fileID: 7287822365820854050}
   m_Layer: 0
   m_Name: NetBot
   m_TagString: Untagged
@@ -114,6 +115,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7287822365820854050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4586299582980497397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c4a9caee3f6874ebbb49e9fd235e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6355037431061222628
 GameObject:
   m_ObjectHideFlags: 0

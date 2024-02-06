@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\PaddleLeft.cs" />
     <Compile Include="Assets\Scripts\ContinuosBackgroundRender.cs" />
     <Compile Include="Assets\Scripts\Paddle.cs" />
+    <Compile Include="Assets\Scripts\NetBot.cs" />
     <Compile Include="Assets\Scripts\AsdwAxisInputController.cs" />
     <Compile Include="Assets\Scripts\IInputController.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />

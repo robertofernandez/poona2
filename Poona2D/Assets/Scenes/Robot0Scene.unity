@@ -1825,14 +1825,6 @@ PrefabInstance:
       value: NetBot
       objectReference: {fileID: 0}
     - target: {fileID: 8198665260440108431, guid: f010befd5b99ded42b74299c9699fa90, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198665260440108431, guid: f010befd5b99ded42b74299c9699fa90, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198665260440108431, guid: f010befd5b99ded42b74299c9699fa90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
       objectReference: {fileID: 0}
