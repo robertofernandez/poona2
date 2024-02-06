@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class RobotPlayer : MonoBehaviour {
+public class RobotPlayerLeft : MonoBehaviour {
     private Rigidbody2D body;
 
     public float maxVelocityY = 10;
@@ -15,14 +15,9 @@ public class RobotPlayer : MonoBehaviour {
     public float currentVelocityX = 0;
     public float currentVelocityY = 0;
 
-    public GameObject inputControllerObject;
-
-    private IInputController inputController;
-
     void Start () {
         body = GetComponent<Rigidbody2D>();
 		body.gravityScale = 2;
-        inputController = inputControllerObject.GetComponent<IInputController>();
     }
 
     void Update() {
@@ -30,9 +25,25 @@ public class RobotPlayer : MonoBehaviour {
     }
 
     void FixedUpdate () {
-        float xInput = inputController.GetXInput();
+
+        float xInput = 0f;
+        if (Input.GetKey(KeyCode.A)) {
+            xInput = -1f;
+        } else if (Input.GetKey(KeyCode.D)) {
+            xInput = 1f;
+        }
+
+        
         if (body != null)
         {
+
+        }
+        else
+        {
+            Debug.LogError("El GameObject no tiene un componente Rigidbody2D.");
+        }
+
+        xInput = Input.GetAxis("Horizontal");
         if (xInput > 0 && currentVelocityX < maxVelocityX) {
             if (currentVelocityX < 0) {
                 currentVelocityX = currentVelocityX + Mathf.Max(xVelocityIncreaseRate, xVelocityDecreaseRate);
@@ -50,12 +61,8 @@ public class RobotPlayer : MonoBehaviour {
         } else if (xInput == 0 && currentVelocityX < 0) {
             currentVelocityX = Mathf.Min(0, currentVelocityX + xVelocityDecreaseRate);
         }
+
         body.velocity = new Vector2(currentVelocityX , currentVelocityY);
-        }
-        else
-        {
-            Debug.LogError("El GameObject no tiene un componente Rigidbody2D.");
-        }
     }
 
 }

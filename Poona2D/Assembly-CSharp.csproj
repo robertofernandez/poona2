@@ -54,11 +54,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\RobotPlayer.cs" />
+    <Compile Include="Assets\Scripts\NonPhysicalRotatingElement.cs" />
+    <Compile Include="Assets\Scripts\PaddleLeft.cs" />
     <Compile Include="Assets\Scripts\ContinuosBackgroundRender.cs" />
     <Compile Include="Assets\Scripts\Paddle.cs" />
+    <Compile Include="Assets\Scripts\AsdwAxisInputController.cs" />
+    <Compile Include="Assets\Scripts\IInputController.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\RobotPlayerLeft.cs" />
     <Compile Include="Assets\Scripts\RobotZeroWheel.cs" />
     <Compile Include="Assets\Scripts\FollowerX.cs" />
+    <Compile Include="Assets\Scripts\DefaultAxisInputController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

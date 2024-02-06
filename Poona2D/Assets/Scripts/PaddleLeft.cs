@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Paddle : MonoBehaviour {
+public class PaddleLeft : MonoBehaviour {
 	public Transform characterTransform;
     public float currentRotation = 0;
 
@@ -11,18 +11,17 @@ public class Paddle : MonoBehaviour {
 
 	private Rigidbody2D rigidbodyObject;
 
-    public GameObject inputControllerObject;
-
-    private IInputController inputController;
-
-
 	void Start () {
 		rigidbodyObject = GetComponent<Rigidbody2D>();
-		inputController = inputControllerObject.GetComponent<IInputController>();
 	}
 	
 	void Update () {
-       float inputRotation = inputController.GetYInput();
+       float inputRotation = 0f;
+        if (Input.GetKey(KeyCode.S)) {
+            inputRotation = -1f;
+        } else if (Input.GetKey(KeyCode.W)) {
+            inputRotation = 1f;
+        }
 
 	   if(inputRotation == 0) 
 	   {
